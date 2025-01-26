@@ -16,8 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Akka" Version="$(AkkaVersion)" />
+<!--    <PackageReference Include="Akka" Version="$(AkkaVersion)" />-->
     <PackageReference Include="Ceen.Httpd" Version="0.9.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\akkanet\src\core\Akka\Akka.csproj" />
   </ItemGroup>
 
 </Project>

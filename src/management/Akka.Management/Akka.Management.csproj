@@ -11,17 +11,24 @@
     <EmbeddedResource Include="Resources\reference.conf" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Akka.Cluster" Version="$(AkkaVersion)" />
-    <PackageReference Include="Akka.Discovery" Version="$(AkkaVersion)" />
-    <PackageReference Include="Akka.Hosting" Version="$(AkkaHostingVersion)" />
-  </ItemGroup>
+<!--  <ItemGroup>-->
+<!--    <PackageReference Include="Akka.Cluster" Version="$(AkkaVersion)" />-->
+<!--    <PackageReference Include="Akka.Discovery" Version="$(AkkaVersion)" />-->
+<!--    <PackageReference Include="Akka.Hosting" Version="$(AkkaHostingVersion)" />-->
+<!--  </ItemGroup>-->
 
-  <ItemGroup>
-    <ProjectReference Include="..\Akka.Http.Shim\Akka.Http.Shim.csproj" />
-  </ItemGroup>
+<!--  <ItemGroup>-->
+<!--    <ProjectReference Include="..\Akka.Http.Shim\Akka.Http.Shim.csproj" />-->
+<!--  </ItemGroup>-->
 
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\akkanethosting\src\Akka.Hosting\Akka.Hosting.csproj" />
+    <ProjectReference Include="..\..\..\..\akkanet\src\core\Akka.Cluster\Akka.Cluster.csproj" />
+    <ProjectReference Include="..\..\..\..\akkanet\src\core\Akka.Discovery\Akka.Discovery.csproj" />
+    <ProjectReference Include="..\Akka.Http.Shim\Akka.Http.Shim.csproj" />
   </ItemGroup>
 </Project>

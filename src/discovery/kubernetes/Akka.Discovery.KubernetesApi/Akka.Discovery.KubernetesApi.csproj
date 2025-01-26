@@ -8,11 +8,11 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Akka.Discovery" Version="$(AkkaVersion)" />
-        <PackageReference Include="Akka.Hosting" Version="$(AkkaHostingVersion)" />
-    </ItemGroup>
-    
+<!--    <ItemGroup>-->
+<!--        <PackageReference Include="Akka.Discovery" Version="$(AkkaVersion)" />-->
+<!--        <PackageReference Include="Akka.Hosting" Version="$(AkkaHostingVersion)" />-->
+<!--    </ItemGroup>-->
+<!--    -->
     <ItemGroup Condition=" '$(TargetFramework)' == '$(LibraryFramework)' ">
         <PackageReference Include="KubernetesClient" Version="$(KubernetesClientVersionNetStandard)" />
 
@@ -43,5 +43,10 @@
     
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\..\..\akkanethosting\src\Akka.Hosting\Akka.Hosting.csproj" />
+      <ProjectReference Include="..\..\..\..\..\akkanet\src\core\Akka.Discovery\Akka.Discovery.csproj" />
     </ItemGroup>
 </Project>
